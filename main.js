@@ -125,7 +125,7 @@ function init() {
     const plane = new THREE.Mesh(geometry, material);
     plane.rotation.x = THREE.Math.degToRad(90);
     plane.position.set(beacon.pos.x, beacon.pos.y, beacon.pos.z);
-    console.log(plane.position);
+
     scene.add(plane);
   });
 
@@ -193,6 +193,8 @@ function init() {
 
       if (foundedBeacon) {
         alert(foundedBeacon.name);
+
+        window.location.href = "/home.html";
       }
     }
 
